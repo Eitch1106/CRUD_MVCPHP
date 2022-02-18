@@ -4,7 +4,7 @@
 
       protected function Conexion(){
           try{
-              $conectar = $this->dbh = new PDO("mysql.local=localhost;dbname=crudmvc","root","viscaelbarca");
+              $conectar = $this->dbh = new PDO("mysql:local=127.0.0.0;dbname=crudmvc","root","viscaelbarca");
               return $conectar;         
             }catch(Exception $e){
                 print "¡Error BD!: " . $e->getMessage() . "<br/>";
